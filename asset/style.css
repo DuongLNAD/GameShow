@@ -9,7 +9,7 @@ html {
 }
 
 .container {
-    background-image: url('/img/nen_neon.jpg');
+    background-image: url('../img/nen_neon.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
