@@ -9,7 +9,7 @@ html {
 }
 
 .container {
-    background-image: url('../img/nen_neon.jpg');
+    background-image: url('../img/bg2.png');
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -21,26 +21,37 @@ html {
 }
 
 .box {
-    font-family: 'Dancing Script', cursive;
+    font-family:'Times New Roman', Times, serif;
     display: flex;
     width: 100%;
     height: 80px;
     font-size: 6rem;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(to right,#FF0033, #993399	);
-    color: #FFFFFF;
+    /* background-image: linear-gradient(to right,#FF0033, #993399	); */
+    /* background: linear-gradient(90deg, rgba(247,247,247,1) 35%, rgba(199,209,234,1) 90%); */
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding-top :12px;
     overflow: hidden;
-    transform: translateX(-250%);
+    /* transform: translateX(-250%); */
+    
 
-
+}
+.box span {
+    animation: textRun 8s linear infinite;
+    color: #000;
+    font-weight: 700;
+    letter-spacing:1px;
+    font-size:8rem;
+    text-shadow: 5px 5px #ccc;
 }
 
 @keyframes textRun {
     from {
-        transform: translateX(-250%);
+        transform: translateX(-150%);
     }
-    to { transform: translateX(300%); }
+    to { transform: translateX(150%); }
 }
 
 .rotage__number {
@@ -58,12 +69,13 @@ html {
     height:100px;
 }
 .rotage__number-show {
-    color: #fff;
+    color: #000;
     font-size:10rem;
     text-align: center;
     transition: all 1s linear;
     /* animation: NoAnimation 4s linear infinite; */
 }
+
 @keyframes NoAnimation {
     from {
         opacity: 0.99;
@@ -99,30 +111,158 @@ html {
     margin: 0;
     list-style: none;
     margin: 32px auto;
-    max-width: 900px;
+    max-width: 950px;
 }
 .show__number-item {
     display: block;
-    font-size: 6rem;
+    font-size: 7rem;
     text-align: center;
     padding: 10px 9px;
-    width: 90px;
-    height: 90px;
-    margin: 5px 5px;
+    width: 100px;
+    height: 100px;
+    margin: 8px;
     background-color: #fff;
     border-right: 1px solid #ccc;
     border-radius: 50%;
 }
 
+.show__number-item:nth-child(3n+1) {
+    background-color: #e4f85f;
+}
+.show__number-item:nth-child(3n+2) {
+    background-color: #e292e7;
+}
+.show__number-item:nth-child(3n+3) {
+    background-color: #a7bbee;
+}
+
+
 .hide-result span {
     position: absolute;
     right: 10%;
     bottom: 1%;
-
     width: 40px;
     height: 40px;
     /* background-color: #fff; */
-    color: #111;
+    color: #90cee0;
     font-size:2rem;
 
+}
+
+
+:root {
+    --color_bar: #29D9C2;
+    --color_high: #FF3B77;
+    --color_background: #2F2933;
+}
+.rotate__number-run span{
+    animation: ShowNumRun 4s ease infinite;
+}
+
+@keyframes ShowNumRun {
+    from {
+        transform: translateY(-700%);
+    }
+    to { 
+        transform: translateY(100%);
+}
+}
+
+#circle {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    width: 200px;
+    height: 200px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+.container-circle {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    animation: tuhuy 2s ease infinite;
+}
+
+
+@keyframes tuhuy {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(350deg);
+
+    }
+}
+
+
+.container-circle span {
+    --rotate : 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform: rotate(var(--rotate));
+    font-size:3rem;
+
+
+}
+.container-circle span:nth-child(2) {
+    --rotate : 60deg;
+    
+}
+.container-circle span:nth-child(3) {
+    --rotate : 120deg;
+}
+.container-circle span:nth-child(4) {
+    --rotate : 180deg;
+}
+.container-circle span:nth-child(5) {
+    --rotate : 240deg;
+}
+.container-circle span:nth-child(6) {
+    --rotate : 300deg;
+}
+
+.container-circle span:nth-child(1)::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 50%;
+    bottom: 50%;
+    left : 50%;
+    background-color: #000;
+    transform: translateX(-50%) rotate(30deg);
+    transform-origin: bottom;
+    
+}
+
+.container-circle span:nth-child(1)::before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 50%;
+    bottom: 50%;
+    left : 50%;
+    background-color: #000;
+    transform: translateX(-50%) rotate(330deg);
+    transform-origin: bottom;
+    
+}
+.container-circle span:nth-child(1)::after,
+.container-circle span:nth-child(2)::after,
+.container-circle span:nth-child(3)::after,
+.container-circle span:nth-child(4)::after,
+.container-circle span:nth-child(5)::after
+ {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 50%;
+    bottom: 50%;
+    left : 50%;
+    background-color: #000;
+    transform: translateX(-50%) rotate(30deg);
+    transform-origin: bottom;
+    
 }

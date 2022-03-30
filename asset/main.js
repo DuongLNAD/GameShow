@@ -29,7 +29,7 @@ const app = {
         let arRandoms = [];
         var i = 0;
         var runCol;
-        const RotageNumberShowsLength = RotageNumberShows.length;
+        var textRender;
 
         function RandomNumber() {
             let randomNumber;
@@ -55,40 +55,43 @@ const app = {
         RotageBtn.onclick = function() {
             var i = 0;
             function ColRun() {
-                
-                if(i < RotageNumberShowsLength ) {
+                const RotageNumberShowsLength = RotageNumberShows.length;
+                // if(i <= RotageNumberShowsLength ) {
                    
-                    if(i == 0) {
-                        document.getElementsByClassName(RotageNumberShow.classList.value)[RotageNumberShowsLength -1].style.transform = `translateY(100%)`;
-                        document.getElementsByClassName(RotageNumberShow.classList.value)[i].style.transform = `translateY(-${100 *i}%)`;
-                        i+=1;
-                    }else {
-                        document.getElementsByClassName(RotageNumberShow.classList.value)[i-1].style.transform = `translateY(100%)`;
-                        document.getElementsByClassName(RotageNumberShow.classList.value)[i].style.transform = `translateY(-${100 *i}%)`;
-                        i+=1;
-                    }
+                //     if(i == 0) {
+                //         document.getElementsByClassName(RotageNumberShow.classList.value)[RotageNumberShowsLength -1].style.transform = `translateY(-1000%)`;
+                //         document.getElementsByClassName(RotageNumberShow.classList.value)[i].style.transform = `translateY(-${100 *i}%)`;
+                //         i+=1;
+                //         console.log('i==0',i)
+                //     }else {
+                //         document.getElementsByClassName(RotageNumberShow.classList.value)[i-1].style.transform = `translateY(-1000%)`;
+                //         document.getElementsByClassName(RotageNumberShow.classList.value)[i].style.transform = `translateY(-${100 *i}%)`;
+                //         i+=1;
+                //         console.log('i!= 0',i)
+                //     }
                     
-                }else {
-                    
-                    i = 0;
-                    document.getElementsByClassName(RotageNumberShow.classList.value)[RotageNumberShowsLength -1].style.transform = `translateY(100%)`;
-                    document.getElementsByClassName(RotageNumberShow.classList.value)[i].style.transform = `translateY(-${100 *i}%)`;
-                    i+=1;
-                }
+                // }else {
+                //     i = 0;
+                //     document.getElementsByClassName(RotageNumberShow.classList.value)[RotageNumberShowsLength ].style.transform = `translateY(100%)`;
+                //     document.getElementsByClassName(RotageNumberShow.classList.value)[i].style.transform = `translateY(-${100 *i}%)`;
+                //     i+=1;
+                //     console.log('i > length',i)
+
+                   
+                // }
 
             }
             RandomNumber();
             render2();
-            
             RotageBtn.style.display = "none"
             ShowBtn.style.display = "block";
             
-            return runCol = setInterval(ColRun, 1200);
+            return runCol = setInterval(ColRun, 1100)
         }
 
         // Show kết quả
         ShowBtn.onclick = function() {
-            clearInterval(runCol)
+            clearInterval(runCol);
             RotageBtn.style.display = "block";
             ShowBtn.style.display = "none";
             // RandomNumber();
