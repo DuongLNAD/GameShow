@@ -32,6 +32,7 @@ html {
     /* background: linear-gradient(90deg, rgba(247,247,247,1) 35%, rgba(199,209,234,1) 90%); */
     background-size: 100%;
     background-repeat: no-repeat;
+    
     padding-top :12px;
     overflow: hidden;
     /* transform: translateX(-250%); */
@@ -144,7 +145,7 @@ html {
     width: 40px;
     height: 40px;
     /* background-color: #fff; */
-    color: #90cee0;
+    color: #b2e0ec;
     font-size:2rem;
 
 }
