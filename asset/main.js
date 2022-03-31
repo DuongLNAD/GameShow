@@ -54,33 +54,33 @@ const app = {
         
         RotageBtn.onclick = function() {
             var i = 0;
-            function ColRun() {
-                const RotageNumberShowsLength = RotageNumberShows.length;
-                // if(i <= RotageNumberShowsLength ) {
+            // function ColRun() {
+            //     const RotageNumberShowsLength = RotageNumberShows.length;
+            //     if(i <= RotageNumberShowsLength ) {
                    
-                //     if(i == 0) {
-                //         document.getElementsByClassName(RotageNumberShow.classList.value)[RotageNumberShowsLength -1].style.transform = `translateY(-1000%)`;
-                //         document.getElementsByClassName(RotageNumberShow.classList.value)[i].style.transform = `translateY(-${100 *i}%)`;
-                //         i+=1;
-                //         console.log('i==0',i)
-                //     }else {
-                //         document.getElementsByClassName(RotageNumberShow.classList.value)[i-1].style.transform = `translateY(-1000%)`;
-                //         document.getElementsByClassName(RotageNumberShow.classList.value)[i].style.transform = `translateY(-${100 *i}%)`;
-                //         i+=1;
-                //         console.log('i!= 0',i)
-                //     }
+            //         if(i == 0) {
+            //             document.getElementsByClassName(RotageNumberShow.classList.value)[RotageNumberShowsLength -1].style.transform = `translateY(-1000%)`;
+            //             document.getElementsByClassName(RotageNumberShow.classList.value)[i].style.transform = `translateY(-${100 *i}%)`;
+            //             i+=1;
+            //             console.log('i==0',i)
+            //         }else {
+            //             document.getElementsByClassName(RotageNumberShow.classList.value)[i-1].style.transform = `translateY(-1000%)`;
+            //             document.getElementsByClassName(RotageNumberShow.classList.value)[i].style.transform = `translateY(-${100 *i}%)`;
+            //             i+=1;
+            //             console.log('i!= 0',i)
+            //         }
                     
-                // }else {
-                //     i = 0;
-                //     document.getElementsByClassName(RotageNumberShow.classList.value)[RotageNumberShowsLength ].style.transform = `translateY(100%)`;
-                //     document.getElementsByClassName(RotageNumberShow.classList.value)[i].style.transform = `translateY(-${100 *i}%)`;
-                //     i+=1;
-                //     console.log('i > length',i)
+            //     }else {
+            //         i = 0;
+            //         document.getElementsByClassName(RotageNumberShow.classList.value)[RotageNumberShowsLength ].style.transform = `translateY(100%)`;
+            //         document.getElementsByClassName(RotageNumberShow.classList.value)[i].style.transform = `translateY(-${100 *i}%)`;
+            //         i+=1;
+            //         console.log('i > length',i)
 
                    
-                // }
+            //     }
 
-            }
+            // }
             RandomNumber();
             render2();
             RotageBtn.style.display = "none"
@@ -92,6 +92,7 @@ const app = {
         // Show kết quả
         ShowBtn.onclick = function() {
             clearInterval(runCol);
+            console.log($('.rotate__number-run span'))
             RotageBtn.style.display = "block";
             ShowBtn.style.display = "none";
             // RandomNumber();
@@ -129,7 +130,7 @@ const app = {
                 return abc.indexOf(list) == -1;
             })
             let htmlss = arListNext.map(function(arLN){
-                return `<span class="rotage__number-show">${arLN}</span>`
+                return `<span class="rotage__number-show" style="animation: ShowNumRun 4s ease infinite">${arLN}</span>`
             })
             ResultNumber.innerHTML = htmlss.join('');
 

@@ -74,7 +74,6 @@ html {
     font-size:10rem;
     text-align: center;
     transition: all 1s linear;
-    /* animation: NoAnimation 4s linear infinite; */
 }
 
 @keyframes NoAnimation {
@@ -156,9 +155,9 @@ html {
     --color_high: #FF3B77;
     --color_background: #2F2933;
 }
-.rotate__number-run span{
+/* .rotate__number-run span{
     animation: ShowNumRun 4s ease infinite;
-}
+} */
 
 @keyframes ShowNumRun {
     from {
@@ -182,7 +181,7 @@ html {
     position: relative;
     width: 100%;
     height: 100%;
-    animation: tuhuy 2s ease infinite;
+    animation: tuhuy 3s ease infinite;
 }
 
 
@@ -266,4 +265,12 @@ html {
     transform: translateX(-50%) rotate(30deg);
     transform-origin: bottom;
     
+}
+
+
+#audio {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
 }
