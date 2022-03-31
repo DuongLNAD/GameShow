@@ -270,7 +270,7 @@ html {
 
 #audio {
     position: absolute;
-    bottom: 0;
+    top: 20%;
     left: 0;
 
 }
